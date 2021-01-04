@@ -1,0 +1,186 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  outline: none;
+  box-sizing: border-box;
+}
+html{
+  position: relative;
+  background: chocolate;
+}
+#wellcome{
+  position: absolute;
+  background: black;
+  width: 90vw;
+  left: 5vw;
+  height: 80vh;
+  opacity: .8;
+//  visibility: hidden;
+  .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    text-align: center;
+    margin: 3vw auto;
+    color: rgb(187, 221, 184);
+    text-shadow: 1px 5px 5px darkgray;
+  }
+
+  #option{
+    display: flex;
+    place-content: center;
+    place-items: center;
+    font-size: 2em;
+    height: 10vh;
+    color: rgb(187, 221, 184);
+    >div{
+      margin: 3vw;
+      >input{
+        margin: 1vw;
+      }
+    }
+  }
+  
+  #start-game{
+    margin-top: 5vh;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >button{
+      font-size: 1.6em;
+      background: rgb(187, 221, 184);
+      color: #ffffff;
+      padding: .5vw;
+      border: 2px solid rgb(30, 151, 19);
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+#info{
+  width: 60vw;
+  height: 5vh;
+  margin: 5vw auto;
+  color: wheat;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  span{
+    max-width: 15vw;
+    margin: 0vw 3vw;
+    overflow: hidden;
+  }
+}
+
+#game{
+  width: 40vw;
+  height: 40vw;
+  background: wheat;
+  margin: 10vw auto;
+  padding: 2vw;
+  border-radius: 2vw;
+  .contenaire{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    span{
+      width: 12vw;
+      height: 12vw;
+      text-align: center;
+      font-size: 10vw;
+      line-height: 12vw;
+    }
+    .border-2{
+      border: 2px solid black;
+      border-top: 0;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+    .border-4{
+      border: 2px solid black;
+      border-left: 0;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+    .border-5{
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+    .border-6{
+      border: 2px solid black;
+      border-right: 0;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    .border-8{
+      border: 2px solid black;
+      border-bottom: 0;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+  }
+}
+#result{
+  opacity: .8;
+  visibility: hidden;
+  position: absolute;
+  left: 5vw;
+  top: 5vh;
+  width: 90vw;
+  height: 80vh;
+  margin: auto;
+  color: #ffffff;
+  background: black;
+  display: flex;
+  .resultText{
+    position: relative;
+    text-align: center;
+    margin: 15vh auto;
+    h1{
+      margin: 7vh;
+      height: 15vh;
+      >span{
+        color: gold;
+        font-size: 1.5em;
+        padding: .5vw;
+      }
+    }
+    .resultScore h2{
+      width: 100%;
+      font-size: 2em;
+      font-weight: 100;
+      :nth-child(1){
+        width: 100%;
+        position: absolute;
+        height: 2vh;
+        top: 20vh;
+        margin: 1vh auto;
+//        padding-top: 100%;
+//        margin: 40%;
+      }
+      :nth-child(3){
+        margin-right: 10vw;
+      }
+      span{
+        margin: 3vw;
+      }
+    }
+  }
+  .again button{
+    background: rgb(115, 184, 13);
+    border-radius: 10%;
+    font-size: 1.2em;
+    color: honeydew;
+    cursor: pointer;
+    width: 30%;
+    height: 5vh;
+    margin: 28%;
+  }
+}

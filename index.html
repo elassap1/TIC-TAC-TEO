@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="wellcome">
+    <div class="title">
+      <h1>Wellcome To TIC-TAC-TEO Game </h1>
+    </div>
+
+    <div id="option">
+      <div class="one-player">
+        <label for="one">One Player</label>
+        <input type="radio" name="state" checked>
+      </div>
+      <div class="two-player">
+        <label for="two">Two Players</label>
+        <input type="radio" name="state" >
+      </div>
+    </div>
+
+    <div id="start-game">
+      <button class="start">Start Game</button>
+    </div>
+  </div>
+  
+  <div id="info">
+    <span>You</span>
+    <span>0</span>
+    <span>score</span>
+    <span>0</span>
+    <span>AI</span>
+  </div>
+  <div id="game">
+    <div class="contenaire">
+      <span></span>
+      <span class="border-2"></span>
+      <span></span>
+      <span class="border-4"></span>
+      <span class="border-5"></span>
+      <span class="border-6"></span>
+      <span></span>
+      <span class="border-8"></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="result">
+    <div class="resultText">
+      <h1><span>?</span></h1>
+      <div class="resultScore">
+        <h2>
+          <span>Score</span> 
+          <span>Your</span><span>0</span>
+          <span>0</span><span>AI</span>
+        </h2>
+      </div>
+      <div class="again">
+        <button>Play Again</button>
+      </div>
+    </div>
+</div>
+  <script type="module" src="./script/main.js"></script>
+</body>
+</html>
