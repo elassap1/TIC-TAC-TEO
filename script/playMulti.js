@@ -36,7 +36,9 @@ const gameStatus = () =>{
     let score_1 = parseInt(select.playerScore[2].textContent);
     let score_2 = parseInt(select.playerScore[3].textContent);
 
-    select.resultGame.style.visibility = 'visible';
+      setTimeout(() => {
+      select.resultGame.style.visibility = 'visible';
+      },500);
 
     if(playerGameStatus(select.childs.children) == 'gain'){
 

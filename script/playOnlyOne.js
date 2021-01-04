@@ -8,11 +8,13 @@ export const isOne =() => {
 
   if(!turne && playerGameStatus(select.childs.children) != 'gain'){
 
-    playAI(mark,select.childs.children);
+    setTimeout(()=> {
+    playAI(mark,select.childs.children)
     
     turne = true;
   
     gameStatus();
+  },500);
   }
 
 
@@ -25,7 +27,7 @@ select.childs.onclick = (e) => {
     if(turne){
 
       turne = false;
-      
+
 //      console.log(turne);
       // set mark
       e.target.innerHTML = 'X';
@@ -34,15 +36,17 @@ select.childs.onclick = (e) => {
 
       if(!turne  && playerGameStatus(select.childs.children) != 'gain'){
 //        mark = 'O'
-
-        playAI(mark,select.childs.children);
+        setTimeout(() => {
+        playAI(mark,select.childs.children)
+        
         turne = true;
-      
         gameStatus();
-      }
-    
+        
+      },500);
+      
     }
   }
+}
 //  console.log(turne);
 }
 }
@@ -54,11 +58,13 @@ const gameStatus = () =>{
     let score_1 = parseInt(select.playerScore[2].textContent);
     let score_2 = parseInt(select.playerScore[3].textContent);
 
-    select.resultGame.style.visibility = 'visible';
+    setTimeout(() => {
+      select.resultGame.style.visibility = 'visible';
+    },500);
 
     if(playerGameStatus(select.childs.children) == 'gain'){
 
-      if(!turne){
+        if(!turne){
 //        console.log('gamestatus O',mark)
         select.playerScore[2].textContent = score_1 + 1;
         select.playerinfo[1].textContent = select.playerScore[2].textContent;
@@ -73,8 +79,9 @@ const gameStatus = () =>{
 
     }else{
 
-      select.resultGame.style.visibility = 'visible';
-      select.winner.textContent = 'It Tie';
+        select.resultGame.style.visibility = 'visible';
+        select.winner.textContent = 'It Tie';
+      
 
 //      console.log('is tie')
       }
